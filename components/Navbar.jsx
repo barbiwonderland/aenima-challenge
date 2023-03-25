@@ -13,7 +13,9 @@ function Navbar() {
   };
   return (
     <>
-      <div className={"navbar flex px-10 h-14 justify-between sm:justify-around sm:p-0 items-center w- p-4 ease-in duration-300"+ (nav && " bg-green")}>
+{/*       /*si el navbar esta abierto agrego un div de transparencia en todo el body*/
+ }      <div className={nav && "w-screen h-screen bg-black opacity-30 absolute z-10"}></div>
+      <div className={"navbar flex px-10 h-14 justify-between md:px-28 py-4 sm:p-0 items-center w- p-4 ease-in duration-300"+ (nav && " bg-green")}>
         <Link href="/"><Image alt='' src={logo} /> </Link>
         {/*Desktop*/}
         <ul className='hidden sm:flex uppercase md:text-2xl'>
@@ -21,13 +23,15 @@ function Navbar() {
         <li className={router.asPath == "/#tendencias" ? "text-gray-700 p-4 font-bold" : "text-gray-400 p-4"}><Link  href="/#tendencias"><span>Tendecias</span></Link></li>
         <li className={router.asPath == "/#blog" ? "text-gray-700 p-4 font-bold" : "text-gray-400 p-4"}><Link  href="/#blog"><span>Blog</span></Link></li>
         </ul>
+ 
         {/* mobile  */}
+
         <div className="hamburger-icon block sm:hidden ">
-          <div onClick={handleNav} className="z-10 relative" >
+          <div onClick={handleNav} className="z-20 relative" >
             {!nav ? <Image  src={hamburgerIcon} width="20px" height="20px" alt="" /> : <Image alt="" src={closeIcon} width="20px" height="20px" />}
           </div>
-          <div  onClick={handleNav}className={!nav ? "hidden" : "flex border border-r-3 mr-2 border-l-0 border-gray-400  z-0 pt-18 h-screen absolute top-0 right-0 pt-28 uppercase w-7/12"}>
-          <ul  >
+          <div  onClick={handleNav}className={!nav ? "hidden" : "flex  "}>
+          <ul className='bg-white  border border-r-3  border-l-0 border-gray-400  z-10 pt-18 h-screen absolute top-0 right-0 pt-16 uppercase w-7/12' >
             <li  className='p-4 text-xl color-gray font-bold'>
               <Link href='/'>Home</Link>
             </li>
