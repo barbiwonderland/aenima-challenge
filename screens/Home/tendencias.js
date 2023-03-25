@@ -1,9 +1,10 @@
+import Loading from "@/components/Loading/Loading.jsx"
 import TrendCard from "@/components/TrendCard/TrendCard"
 import React, { useEffect, useState } from "react"
 import { trending } from ".././data.js"
 function Tendencias() {
   const [isMobile, setIsMobile] = useState(true)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   const setViewport = () => {
     if (window.innerWidth < 720) {
@@ -24,8 +25,9 @@ function Tendencias() {
   }
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false)
-    }, 500)
+      /*       setLoading(false)
+       */
+    }, 1000)
     setViewport()
     window.addEventListener("resize", setViewport)
   }, [])
@@ -36,7 +38,9 @@ function Tendencias() {
       </h1>
       <div className="flex gap-5 justify-center mt-[1rem] sm:mt-20">
         {loading ? (
-          <h1>cargando</h1>
+          <div className="flex w-screen h-screen pt-20 justify-center">
+            <Loading />
+          </div>
         ) : trending && !isMobile ? (
           trending.map((trend) => (
             <TrendCard
