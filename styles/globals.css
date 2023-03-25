@@ -4,7 +4,7 @@
 @tailwind utilities;
 :root {
   --primary-pink: #fa6980;
-  --primary-grey: #cbd0d3;
+  --primary-grey: #ebebeb;
   --primary-dark: #2a3037;
 }
 
@@ -61,30 +61,4 @@ body {
 }
 .color-gray {
   color: #52565a;
-}
-/*******************home**********************/
-.home {
-  background-image: url("../public/Assets/img/Viajes_Hero.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  height: calc(100vh - 3.5rem);
-}
-.next-adventure {
-  position: absolute;
-  bottom: 10vh;
-  right: 10vw;
-  width: 260px;
-  height: 157px;
-  text-align: center;
-  border-radius: 6px;
-  border: 2px dashed #ffffff;
-  flex-direction: column;
-  place-content: center;
-  text-align: start;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: white;
-  gap: 5px;
-  display: none;
 }

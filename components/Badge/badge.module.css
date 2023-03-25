@@ -1,0 +1,12 @@
+.badgeContainer {
+  border-radius: 6px;
+  background-color: var(--primary-pink);
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  position: absolute;
+  left: 20px;
+}

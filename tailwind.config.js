@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       colors: {
         "custom-pink": "var(--primary-pink)",
+        "custom-gray": "var(--primary-grey)",
       },
     },
   },

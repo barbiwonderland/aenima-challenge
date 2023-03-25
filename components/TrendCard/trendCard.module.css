@@ -1,0 +1,14 @@
+.cardContainer {
+  height: 314px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0px 3px 6px #00000029;
+  position: relative;
+}
+.textContainer {
+  display: flex;
+  align-content: center;
+}
+.subtitleCard {
+  font-size: 13px;
+}

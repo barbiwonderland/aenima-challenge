@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <>
 {/*       /*si el navbar esta abierto agrego un div de transparencia en todo el body*/
- }      <div className={nav && "w-screen h-screen bg-black opacity-30 absolute z-10"}></div>
+ }      <div className={nav ? "w-screen h-screen bg-black opacity-30 absolute z-10" : null }></div>
       <div className={"navbar flex px-10 h-14 justify-between md:px-28 py-4 sm:p-0 items-center w- p-4 ease-in duration-300"+ (nav && " bg-green")}>
         <Link href="/"><Image alt='' src={logo} /> </Link>
         {/*Desktop*/}

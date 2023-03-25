@@ -1,0 +1,64 @@
+import TrendCard from "@/components/TrendCard/TrendCard"
+import React, { useEffect, useState } from "react"
+import { trending } from ".././data.js"
+function Tendencias() {
+  const [isMobile, setIsMobile] = useState(true)
+  const [loading, setLoading] = useState(true)
+
+  const setViewport = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true)
+      console.log("mobile")
+    } else {
+      setIsMobile(false)
+      console.log("desktop")
+    }
+  }
+  const setBadge = (date) => {
+    const currentDate = new Date().toLocaleDateString()
+    if (date === currentDate) {
+      return true
+    } else {
+      return false
+    }
+  }
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 500)
+    setViewport()
+    window.addEventListener("resize", setViewport)
+  }, [])
+  return (
+    <div className="h-screen bg-custom-gray d-flex ">
+      <h1 className="pl-[40px] pt-[45px] md:pt-20 uppercase text-2xl font-bold text-start md:pl-[133px]">
+        Tendencias
+      </h1>
+      <div className="flex gap-5 justify-center mt-[1rem] sm:mt-20">
+        {loading ? (
+          <h1>cargando</h1>
+        ) : trending && !isMobile ? (
+          trending.map((trend) => (
+            <TrendCard
+              key={trend.id}
+              img={trend.img}
+              title={trend.title}
+              badge={setBadge(trend.date)}
+              subtitle={trend.description}
+            />
+          ))
+        ) : (
+          <TrendCard
+            key={trending[0].id}
+            img={trending[0].img}
+            title={trending[0].title}
+            badge={setBadge(trending[0].date)}
+            subtitle={trending[0].description}
+          />
+        )}
+      </div>
+    </div>
+  )
+}
+
+export default Tendencias
