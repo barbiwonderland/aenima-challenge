@@ -1,4 +1,15 @@
-import { Card_01, Card_02, Card_03 } from "../public/Assets/img/index.js"
+/*ver de mover a otra carpeta*/
+
+import {
+  cardBlogSm_1,
+  cardBlogSm_2,
+  cardBlogSm_3,
+  cardBlog_big1,
+  cardBlog_big2,
+  Card_01,
+  Card_02,
+  Card_03,
+} from "../public/Assets/img/index.js"
 
 export const trending = [
   {
@@ -27,7 +38,7 @@ export const trending = [
 export const blog = [
   {
     id: 1,
-    img: "../public/Assets/img/articulo_big_01.png",
+    img: cardBlog_big1,
     title: "Artículo de puente",
     description:
       "Un puente es una construcción que permite salvar un accidente geográfico como un río.",
@@ -36,7 +47,7 @@ export const blog = [
   },
   {
     id: 2,
-    img: "../public/Assets/img/articulo_big_02.png",
+    img: cardBlog_big2,
     title: "Artículo de bosque",
     description:
       "Lugar poblado de árboles y arbustos. Área con una importante densidad de árboles.",
@@ -45,7 +56,7 @@ export const blog = [
   },
   {
     id: 3,
-    img: "../public/Assets/img/articulo_small_01.png",
+    img: cardBlogSm_1,
     title: "Artículo de elefante",
     description: "",
     badge: "",
@@ -53,7 +64,7 @@ export const blog = [
   },
   {
     id: 4,
-    img: "../public/Assets/img/articulo_small_02.png",
+    img: cardBlogSm_2,
     title: "Artículo de loro",
     description: "",
     badge: "",
@@ -61,7 +72,7 @@ export const blog = [
   },
   {
     id: 5,
-    img: "../public/Assets/img/articulo_small_02.png",
+    img: cardBlogSm_3,
     title: "Artículo de camino",
     description: "",
     badge: "",
