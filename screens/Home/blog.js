@@ -50,7 +50,7 @@ function Blog() {
                     description={item.description}
                   />
                 )
-              } else if (!isMobile) {
+              } else if (!isMobile && index < 5) {
                 return (
                   <CardBlog
                     key={item.id}
