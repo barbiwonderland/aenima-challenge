@@ -2,6 +2,8 @@ import Loading from "@/components/Loading/Loading.jsx"
 import TrendCard from "@/components/TrendCard/TrendCard"
 import React, { useEffect, useState } from "react"
 import { trending } from ".././data.js"
+import Blog from "./blog.js"
+
 function Tendencias() {
   const [isMobile, setIsMobile] = useState(true)
   const [loading, setLoading] = useState(false)
@@ -25,18 +27,17 @@ function Tendencias() {
   }
   useEffect(() => {
     setTimeout(() => {
-      /*       setLoading(false)
-       */
+      setLoading(false)
     }, 1000)
     setViewport()
     window.addEventListener("resize", setViewport)
   }, [])
   return (
-    <div className="h-screen bg-custom-gray d-flex ">
-      <h1 className="pl-[40px] pt-[45px] md:pt-20 uppercase text-2xl font-bold text-start md:pl-[133px]">
+    <div className="h-screen bg-custom-gray d-flex relative ">
+      <h1 className="pl-[40px] pt-[45px] md:pt-32 uppercase text-2xl font-bold text-start md:pl-[9rem]">
         Tendencias
       </h1>
-      <div className="flex gap-5 justify-center mt-[1rem] sm:mt-20">
+      <div className="flex gap-5 justify-center mt-[1rem] sm:mt-20 prueba">
         {loading ? (
           <div className="flex w-screen h-screen pt-20 justify-center">
             <Loading />
@@ -61,6 +62,7 @@ function Tendencias() {
           />
         )}
       </div>
+      <Blog />
     </div>
   )
 }

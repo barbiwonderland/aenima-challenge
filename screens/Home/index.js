@@ -6,6 +6,7 @@ import navSlider from "../../public/Assets/iconos/nav_slider.svg"
 import Tendencias from "./tendencias"
 import styles from "./home.module.css"
 import TrendCard from "@/components/TrendCard/TrendCard"
+import Blog from "./blog"
 function HomePage() {
   return (
     <>
@@ -27,7 +28,7 @@ function HomePage() {
             </p>
           </div>
         </div>
-        <div className=" w-[150px] -left-16 nav-slider z-10 md:left-0 bottom-5 absolute  ">
+        <div className="  w-[150px] -left-16 nav-slider z-10 md:left-0 bottom-5 absolute  ">
           <Image src={navSlider} alt="" width={200} height={60} />
         </div>
         <div className={` ${styles.nextAdventure} hidden md:flex`}>
