@@ -11,7 +11,7 @@ import Footer from "@/components/Footer/footer"
 function HomePage() {
   return (
     <>
-      <div className={` relative z-0 w-screen ${styles.home}`}>
+      <div id="home" className={` relative z-0 w-screen ${styles.home}`}>
         <div className="  mx-auto md:mx-0 w-11/12 md:w-screen md:pl-52 md:justify-start titles content-center justify-center text-2xl  flex-wrap text-white h-full flex">
           <div className=" md:text-5xl inline-flex uppercase gap-3 font-bold border-b-2 border-white pb-3 pr-12 md:pr-0 mb-5">
             <Image className="object-contain" src={MapIcon} alt="" />

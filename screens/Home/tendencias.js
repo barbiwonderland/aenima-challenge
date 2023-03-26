@@ -33,7 +33,7 @@ function Tendencias() {
     window.addEventListener("resize", setViewport)
   }, [])
   return (
-    <div className="">
+    <div id="tendencias">
       {" "}
       <div className="h-screen w-full bg-custom-gray d-flex  ">
         <h1 className="pl-[40px] pt-[45px] md:pt-32 uppercase text-2xl font-bold text-start md:pl-[9rem]">

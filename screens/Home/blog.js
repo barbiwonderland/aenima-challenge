@@ -26,7 +26,7 @@ function Blog() {
   }, [])
   return (
     <>
-      <div className="  w-full -mt-40">
+      <div id="blog" className="  w-full -mt-40">
         <h1 className="uppercase text-dark text-2xl font-bold  pl-[2rem] sm:pl-[9rem] pb-[2.3rem]">
           Blog
         </h1>
