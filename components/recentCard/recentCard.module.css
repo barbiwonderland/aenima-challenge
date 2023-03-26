@@ -1,0 +1,7 @@
+.cardContainer {
+  height: 429px;
+  position: relative;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  border-radius: 6px;
+}
