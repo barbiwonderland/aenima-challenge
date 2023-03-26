@@ -19,9 +19,7 @@ function TrendCard({ img, title, subtitle, badge }) {
               <div className={`text-base font-bold ${styles.titleCard}`}>
                      {title}
               </div>
-              <div className={styles.subtitleCard}>
-                     {subtitle}     
-                  </div>
+              <div  className={styles.subtitleCard} dangerouslySetInnerHTML={ {__html: subtitle} }></div>
                   </div>
           </div>
       </>
