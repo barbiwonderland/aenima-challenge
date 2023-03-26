@@ -33,36 +33,38 @@ function Tendencias() {
     window.addEventListener("resize", setViewport)
   }, [])
   return (
-    <div className="h-screen bg-custom-gray d-flex relative ">
-      <h1 className="pl-[40px] pt-[45px] md:pt-32 uppercase text-2xl font-bold text-start md:pl-[9rem]">
-        Tendencias
-      </h1>
-      <div className="flex gap-5 justify-center mt-[1rem] sm:mt-20 prueba">
-        {loading ? (
-          <div className="flex w-screen h-screen pt-20 justify-center">
-            <Loading />
-          </div>
-        ) : trending && !isMobile ? (
-          trending.map((trend) => (
+    <div className="">
+      {" "}
+      <div className="h-screen w-full bg-custom-gray d-flex  ">
+        <h1 className="pl-[40px] pt-[45px] md:pt-32 uppercase text-2xl font-bold text-start md:pl-[9rem]">
+          Tendencias
+        </h1>
+        <div className="flex gap-5 justify-center mt-[1rem] sm:mt-20 prueba">
+          {loading ? (
+            <div className="flex w-screen h-screen pt-20 justify-center">
+              <Loading />
+            </div>
+          ) : trending && !isMobile ? (
+            trending.map((trend) => (
+              <TrendCard
+                key={trend.id}
+                img={trend.img}
+                title={trend.title}
+                badge={setBadge(trend.date)}
+                subtitle={trend.description}
+              />
+            ))
+          ) : (
             <TrendCard
-              key={trend.id}
-              img={trend.img}
-              title={trend.title}
-              badge={setBadge(trend.date)}
-              subtitle={trend.description}
+              key={trending[0].id}
+              img={trending[0].img}
+              title={trending[0].title}
+              badge={setBadge(trending[0].date)}
+              subtitle={trending[0].description}
             />
-          ))
-        ) : (
-          <TrendCard
-            key={trending[0].id}
-            img={trending[0].img}
-            title={trending[0].title}
-            badge={setBadge(trending[0].date)}
-            subtitle={trending[0].description}
-          />
-        )}
+          )}
+        </div>
       </div>
-      <Blog />
     </div>
   )
 }

@@ -2,6 +2,7 @@ import RecentCardBlog from "@/components/recentCard/RecentCardBlog"
 import { blog } from "../data.js"
 import React, { useEffect, useState } from "react"
 import CardBlog from "@/components/CardBlog/cardBlog.jsx"
+import Loading from "@/components/Loading/Loading.jsx"
 
 function Blog() {
   const [isMobile, setIsMobile] = useState(true)
@@ -25,11 +26,11 @@ function Blog() {
   }, [])
   return (
     <>
-      <div className="top-[80%] absolute h-screen w-full">
-        <h1 className="uppercase text-dark text-2xl font-bold pl-[9rem] pb-[2.3rem]">
+      <div className="  w-full -mt-40">
+        <h1 className="uppercase text-dark text-2xl font-bold  pl-[2rem] sm:pl-[9rem] pb-[2.3rem]">
           Blog
         </h1>
-        <div className="gap-7 flex h-[982px] content-center flex-wrap flex-col">
+        <div className="gap-7 flex h-[982px]  w-screen content-center flex-wrap flex-col">
           {" "}
           {loading ? (
             <div className="flex w-screen h-screen pt-20 justify-center">

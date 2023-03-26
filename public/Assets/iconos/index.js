@@ -1,3 +1,4 @@
 import Clock from "./time.svg"
-
-export { Clock }
+import Fb from "./facebook.svg"
+import Ig from "./instagram.svg"
+export { Clock, Fb, Ig }

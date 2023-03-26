@@ -7,6 +7,7 @@ import Tendencias from "./tendencias"
 import styles from "./home.module.css"
 import TrendCard from "@/components/TrendCard/TrendCard"
 import Blog from "./blog"
+import Footer from "@/components/Footer/footer"
 function HomePage() {
   return (
     <>
@@ -44,7 +45,9 @@ function HomePage() {
           </div>
         </div>
       </div>
+
       <Tendencias />
+      <Blog />
     </>
   )
 }
