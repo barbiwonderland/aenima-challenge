@@ -36,10 +36,10 @@ function Tendencias() {
     <div id="tendencias">
       {" "}
       <div className="h-screen w-full bg-custom-gray d-flex  ">
-        <h1 className="pl-[40px] pt-[45px] md:pt-32 uppercase text-2xl font-bold text-start md:pl-[9rem]">
+        <h1 className="pl-[40px] pt-[45px] md:pt-[4rem] uppercase text-2xl font-bold text-start md:pl-[9rem]">
           Tendencias
         </h1>
-        <div className="flex gap-5 justify-center mt-[1rem] sm:mt-20 prueba">
+        <div className="flex gap-5 justify-center mt-[1rem] sm:mt-[2rem] prueba">
           {loading ? (
             <div className="flex w-screen h-screen pt-20 justify-center">
               <Loading />
