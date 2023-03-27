@@ -14,7 +14,7 @@ function RecentCardBlog({ title, description, footer, category, img }) {
               </div>
               <div className={` text-white ${styles.cardInfo}`}>
                   <div className="pb-5"> <h1 className='font-bold text-2xl first-letter:capitalize'>{title}</h1>
-                  <p className='first-letter:capitalize'>{description}</p></div>
+                  <p className='hidden sm:flex first-letter:capitalize'>{description}</p></div>
                   <div className='  color-[custom-gray] inline-flex gap-2 text-[13px]'><Image alt='' src={Clock } width={16} height={16} /><p className='first-letter:capitalize'>{ footer}</p></div>
               </div>
           </div>

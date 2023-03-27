@@ -4,7 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  height: calc(100vh - 3.5rem);
+  height: 100vh;
 }
 .nextAdventure {
   position: absolute;
@@ -19,7 +19,7 @@
   place-content: center;
   text-align: start;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(77 72 72 / 33%);
   color: white;
   gap: 5px;
 }
