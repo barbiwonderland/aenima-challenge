@@ -5,7 +5,7 @@ import Logo from "../././../public/Assets/logo/logo_02.svg"
 function Footer() {
   return (
       <>
-          <div className="darkGrey-bg items-center text-white flex justify-between px-24 bg-black h-[50px] w-full absolute bottom-0  ">
+          <div className="darkGrey-bg items-center text-white flex justify-between px-24 bg-black h-[80px] sm:h-[96px] w-full absolute bottom-0  ">
               <div className="">
                <Image alt='logo' src={Logo}/>
               </div>

@@ -1,7 +1,7 @@
 import Loading from "@/components/Loading/Loading.jsx"
 import TrendCard from "@/components/TrendCard/TrendCard"
 import React, { useEffect, useState } from "react"
-import { trending } from ".././data.js"
+import { trending } from "../../data/data.js"
 import Blog from "./blog.js"
 
 function Tendencias() {

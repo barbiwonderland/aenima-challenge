@@ -1,5 +1,5 @@
 import RecentCardBlog from "@/components/recentCard/RecentCardBlog"
-import { blog } from "../data.js"
+import { blog } from "../../data/data.js"
 import React, { useEffect, useState } from "react"
 import CardBlog from "@/components/CardBlog/cardBlog.jsx"
 import Loading from "@/components/Loading/Loading.jsx"
@@ -26,8 +26,8 @@ function Blog() {
   }, [])
   return (
     <>
-      <div id="blog" className="  w-full -mt-[14rem]">
-        <h1 className="uppercase text-dark text-2xl font-bold  pl-[2rem] sm:pl-[9rem] pb-[2.3rem]">
+      <div id="blog" className="  w-full -mt-[14rem] mb-[50px]">
+        <h1 className="uppercase text-dark mt-[20px] text-2xl font-bold  pl-[2rem] sm:pl-[9rem] pb-[2.3rem]">
           Blog
         </h1>
         <div className="gap-7 flex h-[982px]  w-screen content-center flex-wrap flex-col">
